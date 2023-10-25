@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout"
+      xmlns:custom="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>List product</title>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <div class="row">
+      <div class="table-responsive col-md-6">
+        <h1 style="text-align: center;">List User</h1>
+        <table class="table">
+          <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr th:each="user:${listUser}">
+            <td th:text = "${user.user_id}"></td>
+            <td th:text = "${user.username}"></td>
+            <td th:text = "${user.email}"></td>
+            <td>
+              <a class="btn btn-success">User</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table-responsive col-md-6">
+        <h1 style="text-align: center;">List Admin</h1>
+        <table class="table">
+          <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr th:each="admin:${listAdmin}">
+            <td th:text = "${admin.user_id}"></td>
+            <td th:text = "${admin.username}"></td>
+            <td th:text = "${admin.email}"></td>
+            <td>
+              <a class="btn btn-danger">Admin</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="table-responsive col-md-6">
+        <h1 style="text-align: center;">List Sale</h1>
+        <table class="table">
+          <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr th:each="sale:${listSale}">
+            <td th:text = "${sale.user_id}"></td>
+            <td th:text = "${sale.username}"></td>
+            <td th:text = "${sale.email}"></td>
+            <td>
+              <a class="btn btn-danger">Sale</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</div>
+</body>
+</html>

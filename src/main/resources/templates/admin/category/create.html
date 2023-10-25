@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Danh Mục Sản Phẩm</title>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <form th:action="@{~/admin/category/create}" th:object="${category}" method="post" class="form" enctype = "multipart/form-data">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" th:field="*{name}" id="name"  placeholder="Category Name">
+            <div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+        </div>
+        <input type="submit"  class="btn btn-success" value="Add Category">
+    </form>
+</div>
+</body>
+</html>
+

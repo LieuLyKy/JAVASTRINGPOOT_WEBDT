@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorate="_layout"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantity Sold</title>
+
+</head>
+<body>
+<h1>Total Quantity Sold</h1>
+<div layout:fragment="content" class="container">
+  <h1>Tổng Số Lượng Bán Được</h1>
+  <div class="quantity">
+    <h2><h3 th:text="${totalQuantitySold}"></h3> Được Bán Ra Thị Trường</h2>
+  </div>
+</div>
+</body>
+</html>

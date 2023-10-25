@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="_layout" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Revenue</title>
+
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+
+    <div class="order-details">
+        <!-- Order Widget -->
+        <div class="single-widget">
+
+            <div class="content">
+
+                <ul>
+                    <h2>Tổng Doanh Thu<h3 th:text="${T(com.example.WebDT.utils.FormatUtils).formatPrice(totalRevenue)}"></h3> VNĐ</h2>
+
+                </ul>
+            </div>
+        </div>
+        <!--/ End Order Widget -->
+        <!-- Order Widget -->
+
+        <!--/ End Order Widget -->
+        <!-- Payment Method Widget -->
+
+        <!--/ End Payment Method Widget -->
+        <!-- Button Widget -->
+        <div class="single-widget get-button">
+            <div class="content">
+                <div class="button">
+                    <a href="#" class="btn">Tuyệt Vời</a>
+                </div>
+            </div>
+        </div>
+        <!--/ End Button Widget -->
+    </div>
+
+</div>
+</body>
+</html>
